@@ -1,0 +1,30 @@
+<!-- views/new-post.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Blog Post</title>
+  <link rel="stylesheet" href="/styles/bootstrap.min.css"> <!-- Include Bootstrap CSS -->
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>New Blog Post</h1>
+    <form action="/post" method="post">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title:</label>
+        <input type="text" class="form-control" id="title" name="title" required>
+      </div>
+      <div class="mb-3">
+        <label for="content" class="form-label">Content:</label>
+        <textarea class="form-control" id="content" name="content" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Post</button>
+    </form>
+  </div>
+
+  <!-- Include Bootstrap JavaScript and Popper.js -->
+  <script src="/scripts/popper.min.js"></script>
+  <script src="/scripts/bootstrap.min.js"></script>
+</body>
+</html>

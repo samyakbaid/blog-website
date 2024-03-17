@@ -1,0 +1,54 @@
+<%- include("partials/header.ejs") %>
+
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Blogs </h1>
+        <p class="lead text-body-secondary">Scroll down to have a look at some of the blogs </p>
+        <p>
+          <a href="new-post" class="btn btn-primary my-2">Write new blog</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+     <% if (locals.posts) { %>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        
+         
+       
+        <% posts.forEach((post, index) => { %>
+          
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title"><%= post.title %></h5>
+                <p class="card-text"><%= post.content %></p>
+                <a href="/blog/<%= post.id %>" class="btn btn-primary">Read more</a>
+                <a href="/edit/<%= post.id %>" class="btn btn-primary">Edit</a>
+                <a href="/delete/<%= post.id %>" class="btn btn-primary
+                  ">Delete</a>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </div>
+ <% } %>
+</main>
+
+<footer class="text-body-secondary py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="index">Back to top</a>
+    </p>
+
+  </div>
+
+
+  <%- include("partials/footer.ejs") %>

@@ -1,0 +1,25 @@
+</footer>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    
+
+<scribe-shadow id="crxjs-ext" style="position: fixed; width: 0px; height: 0px; top: 0px; left: 0px; z-index: 2147483647; overflow: visible;"></scribe-shadow></body>
+<script>const themeToggle = document.getElementById('bd-theme');
+  const body = document.body;
+
+  themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+    const isDarkMode = body.classList.contains('dark-theme');
+    localStorage.setItem('darkMode', isDarkMode);
+  });
+
+  // Check local storage for user preference
+  const storedDarkMode = localStorage.getItem('darkMode');
+  if (storedDarkMode === 'true') {
+    body.classList.add('dark-theme');
+  }
+  </script> 
+<script src="/scripts/popper.min.js"></script>
+  <script src="/scripts/bootstrap.min.js"></script>
+</body>
+</html>
